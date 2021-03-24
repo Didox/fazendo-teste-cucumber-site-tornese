@@ -12,14 +12,13 @@ public class BuscandoConteudoSteps {
 
   @Dado("digito no campo de busca a palavra {string}")
   public void buscaPorTexto(String string) {
-    WebElement input = Configuracao.browser.findElement( By.cssSelector(".form-pesquisa") );
-    input.sendKeys(string);
-    Configuracao.browser.findElement(By.cssSelector(".btn-pesquisa")).click();
+    Configuracao.seletorQueryCss(".form-pesquisa").sendKeys(string);
+    Configuracao.seletorQueryCss(".btn-pesquisa").click();
   }
 
   @Entao("devo ver o resultado na busca")
   public void validandoResultado() {
-    assertEquals(true, Configuracao.browser.findElements(By.cssSelector(".div-card-aulas")).size() > 0);
+    assertEquals(true, Configuracao.seletorQueryCssTodos(".div-card-aulas").size() > 0);
     Configuracao.fechar();
   }
 }
