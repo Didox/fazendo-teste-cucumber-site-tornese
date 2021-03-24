@@ -1,4 +1,5 @@
 # language: pt
+# @ignore
 Funcionalidade: Buscando dados no site torne-se um programador
   O objetivo deste teste é fazer uma busca por TDD e BDD no site do torne-se um programador
 
